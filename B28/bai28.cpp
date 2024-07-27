@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-/*Cho mảng số nguyên A[] gồm N phần tử, 
+/*Cho mảng số nguyên A[] gồm N phần tử,
 hãy liệt kê các giá trị xuất hiện trong mảng theo thứ tự xuất hiện
  trong mảng kèm theo tần suất của nó, mỗi giá trị chỉ liệt kê một lần.
  9
@@ -15,17 +15,22 @@ hãy liệt kê các giá trị xuất hiện trong mảng theo thứ tự xuấ
 
 */
 int cnt[1000001];
-int main(){
-    int n;
-    cin>>n;
-    int a[n];
-    for(int &x : a) {
-        cin>>x;
+int main() {
+  int n;
+  cin >> n;
+  int a[n];
+
+  for (int i = 0; i < n; i++) {
+    cin >> a[i];
+  }
+  // liet ke so lan xuat hien;
+  for (int i = 0; i < n; i++) {
+    cnt[a[i]]++;
+  }
+  for (int i = 0; i < n; i++) {
+    if (cnt[a[i]] != 0) {
+      cout << a[i] << " " << cnt[a[i]] << endl;
+      cnt[a[i]] = 0;
     }
-    //liet ke so lan xuat hien;
-    for(int i = 0; i < n; i++){
-        cnt[a[i]]++;
-    }
-    
-   
+  }
 }
