@@ -34,7 +34,7 @@ int main() {
   }
 
   if (pos != -1) {
-    // Xóa phần tử đầu tiên có giá trị X
+    // Xóa phần tử đầu tiên có vi tri X
     A.erase(A.begin() + pos);
 
     // In ra mảng sau khi xóa
